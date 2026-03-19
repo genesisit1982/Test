@@ -12,7 +12,7 @@ TIMESTAMPDIFF(SECOND,TO_TIMESTAMP(REPLACE(STARTED_AT,'"','')),TO_TIMESTAMP(REPLA
 
 from
 {{ ref('stage_bike') }}
-where RIDE_ID <> 'ride_id'
+where RIDE_ID != 'ride_id' and RIDE_ID != 'bikeid'
 )
 
 select * from TRIPS
