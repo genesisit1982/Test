@@ -15,7 +15,7 @@ with bike As(
 
 from 
 {{ source('demo', 'bike') }}
-where RIDE_ID <> '"RIDE_ID"'
+where RIDE_ID <> '"RIDE_ID"' and RIDE_ID <> '"bikeid"'
 )
 
 select * from Bike
