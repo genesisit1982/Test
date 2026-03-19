@@ -9,7 +9,7 @@ HOUR(TO_TIMESTAMP(STARTED_AT)) AS HOUR_STARTED_AT,
 {{function1('STARTED_AT')}}
 
 FROM
-{{ source('demo', 'bike') }}
+{{ ref('stage_bike') }}
 where STARTED_AT != 'started_at'
 
 )
